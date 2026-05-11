@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="24dp"
+        android:paddingBottom="160dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aegis"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#5A3EC8"
+            android:letterSpacing="0.05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stay protected, always"
+            android:textColor="#777"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/safeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAFE"
+            android:textColor="#2E7D32"
+            android:background="#E8F5E9"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E8F5E9"
+            android:elevation="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- GLOW CIRCLE BACK -->
+        <FrameLayout
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <!-- OUTER GLOW -->
+            <View
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:background="@drawable/glow_circle"
+                android:alpha="0.5"/>
+
+            <!-- SOS BUTTON -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sosButton"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="SOS\nHold to activate"
+                android:background="@drawable/sos_circle"
+                android:backgroundTint="@null"
+                android:elevation="6dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="22dp"
+            android:paddingBottom="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="6dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Status"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#888"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- LOCATION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    app:tint="#6C63FF"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textSize="12sp"
+                        android:textColor="#6C63FF"/>
+
+                    <TextView
+                        android:id="@+id/locationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Safe"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D3748"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- MOVEMENT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="#2196F3"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movement"
+                        android:textSize="12sp"
+                        android:textColor="#2196F3"/>
+
+                    <TextView
+                        android:id="@+id/movementStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Normal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D3748"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- BATTERY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_lock_idle_charging"
+                    app:tint="#4CAF50"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battery"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"/>
+
+                    <TextView
+                        android:id="@+id/batteryStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="84%"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#2D3748"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Share Live Location"
+            android:id="@+id/shareButton"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/share_button_bg"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:elevation="12dp" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/card_bg"
+        app:menu="@menu/bottom_menu"/>
+</LinearLayout>

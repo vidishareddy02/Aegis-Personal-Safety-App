@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
+    android:paddingBottom="12dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_gradient"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aegis"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#5A3EC8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safety Dashboard"
+            android:textColor="#777"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- SAFETY STATUS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● SAFE"
+            android:textColor="#2E7D32"
+            android:textSize="12sp"
+            android:background="#E8F5E9"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="5dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- LOCATION CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:elevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:tint="#6C63FF"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#6C63FF" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hyderabad, India"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/updatedTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updated 2 min ago"
+                android:textColor="#888"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!-- RISK FACTORS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:elevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_dialog_alert"
+                android:tint="#FF6B6B"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Risk Factors"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#FF6B6B"/>
+
+            <TextView android:id="@+id/riskText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Night time detected"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/batteryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Low battery"
+                android:layout_marginTop="4dp"/>
+
+
+        </LinearLayout>
+
+        <!-- ACTIVITY -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:elevation="8dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:tint="#4CAF50"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#4CAF50"/>
+
+            <TextView android:id="@+id/movementText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movement: Normal"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Status: Active"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- QUICK ACTIONS -->
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Share Live Location"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/share_button_bg"
+            android:layout_marginTop="16dp"
+            android:letterSpacing="0.08"
+            android:textAllCaps="false"
+            android:paddingVertical="12dp"
+            android:elevation="6dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sosBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Trigger SOS"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/sos_button_bg"
+            android:backgroundTint="@null"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="12dp"
+            android:letterSpacing="0.08"
+            android:textAllCaps="false"
+            android:elevation="6dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg"
+        app:menu="@menu/bottom_menu" />
+
+</LinearLayout>

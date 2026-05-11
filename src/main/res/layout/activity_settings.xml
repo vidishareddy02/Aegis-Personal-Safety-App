@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="#F3F0FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:paddingBottom="140dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aegis"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#5A3EC8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="18sp"
+                android:textColor="#6C63FF"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- PROFILE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="3dp"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#5A3EC8"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:hint="Name"
+                    android:background="@drawable/input_bg"
+                    android:textColor="#2D3748"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:hint="Phone Number"
+                    android:background="@drawable/input_bg"
+                    android:textColor="#2D3748"
+                    android:inputType="phone"/>
+            </LinearLayout>
+
+            <!-- CONTACTS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="3dp"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Contacts"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#5A3EC8"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/phone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:hint="Contact 1"
+                    android:background="@drawable/input_bg"
+                    android:textColor="#2D3748"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+                    android:hint="Contact 2"
+                    android:background="@drawable/input_bg"
+                    android:textColor="#2D3748" />
+            </LinearLayout>
+
+            <!-- SETTINGS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="3dp"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safety Settings"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#5A3EC8"
+                    android:layout_marginBottom="10dp"/>
+
+                <Switch
+                    android:id="@+id/monitorSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Monitoring"
+                    android:textColor="#2D3748"/>
+
+                <Switch
+                    android:id="@+id/soundSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sound Alert"
+                    android:textColor="#2D3748"/>
+
+                <Switch
+                    android:id="@+id/vibrationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vibration Alert"
+                    android:textColor="#2D3748"/>
+            </LinearLayout>
+
+            <!-- PERMISSIONS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="3dp"
+                android:padding="14dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Permissions"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#5A3EC8"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/locationStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location: Enabled"
+                    android:textColor="#2D3748"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/smsStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMS: Not granted"
+                    android:textColor="#2D3748"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/notificationStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications: Not granted"
+                    android:textColor="#2D3748"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/micStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mic: Not granted"
+                    android:textColor="#2D3748"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/requestPermissionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grant Permissions"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- SAVE BUTTON -->
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/sos_circle"
+                android:textColor="#FFFFFF"
+                android:text="Save Settings"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:elevation="8dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_bg"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>
